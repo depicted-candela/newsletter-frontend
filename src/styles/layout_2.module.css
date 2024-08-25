@@ -1,0 +1,72 @@
+/* src/styles/layout_2.module.css */
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btnPrimary {
+    background-color: #00509e;
+    border-color: #00509e;
+    color: #fff;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem;
+    text-align: center;
+}
+
+.btnPrimary:hover {
+    background-color: #0077cc;
+    border-color: #0077cc;
+}
+
+.Content {
+    margin-bottom: 20px;
+}
+
+.KeyPoints, .AdditionalResources {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.textMuted {
+    color: #888;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.csKeyPoints {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.csAdditionalResources {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.csBackLink {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.csContact {
+    margin-top: 30px;
+    background-color: #f1f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}

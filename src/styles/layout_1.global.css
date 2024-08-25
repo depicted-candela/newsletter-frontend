@@ -1,0 +1,31 @@
+/* src/styles/layout_1.global.css */
+
+h1, h2 {
+    color: #005a34;
+}
+
+h3 {
+    color: #007849;
+}
+
+p {
+    line-height: 1.3;
+    color: #444;
+}
+
+ul {
+    color: #555;
+}
+
+li {
+    line-height: 1.5;
+}
+
+a {
+    color: #d35400;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,90 @@
+/* src/styles/layout_1.module.css */
+
+.body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btnPrimary {
+    background-image: linear-gradient(45deg, #007849, #333);
+    color: #fff;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem;
+}
+
+.btnPrimary:hover {
+    background-image: linear-gradient(45deg, #f06595, #ff6b6b);
+}
+
+.Content {
+    margin-bottom: 20px;
+}
+
+.KeyPoints, .AdditionalResources {
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.textMuted {
+    color: #888;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.navLink {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007849;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.navLink:hover, .navLink:focus {
+    background-color: #005a34;
+    color: white;
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colAuto {
+    flex: 0 0 auto;
+}
+
+.KeyPoints {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.AdditionalResources {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

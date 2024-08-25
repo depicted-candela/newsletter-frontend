@@ -1,0 +1,83 @@
+/* Home.module.css */
+
+.container {
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.byline {
+    font-size: 1.2rem;
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.entryList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.entryItem {
+    margin-bottom: 15px;
+}
+
+.entryLink {
+    font-size: 1.2rem;
+    color: #2980b9;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #ecf0f1;
+    font-weight: 500;
+}
+
+.entryLink:hover {
+    background-color: #3498db;
+    color: #ecf0f1;
+    transform: translateY(-3px);
+}
+
+.languageToggleButton {
+    padding: 12px 24px;
+    margin: 20px 0;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.languageToggleButton:hover {
+    background-color: #2ecc71;
+}
