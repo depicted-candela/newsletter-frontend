@@ -207,6 +207,72 @@ const LogicContent: React.FC<LogicContentProps> = ({ styles, language }) => {
                     </div>
                 </div>
             )}
+            {language === 'es' && (
+                <div id="spanishContent">
+                    <div className={styles.textCenter}>
+                        <h1>Lógica Sentencial: Comprendiendo el Razonamiento Deductivo y los Conectivos Lógicos</h1>
+                    </div>
+                    <h2>¿Qué es el Razonamiento Deductivo?</h2>
+                    <p>
+                        El razonamiento deductivo es un proceso lógico donde se llega a una conclusión basada en premisas (enunciados) que se asumen como verdaderas.
+                        Un argumento se considera válido si es imposible que todas las premisas sean verdaderas y la conclusión sea falsa.
+                    </p>
+
+                    <h3>Ejemplos de Razonamiento Deductivo</h3>
+
+                    <div className={styles.content}>
+                        <h4>Ejemplo 1:</h4>
+                        <ul>
+                            <li>Premisa 1: <span dangerouslySetInnerHTML={renderMath('P')} /> - Lloverá mañana.</li>
+                            <li>Premisa 2: <span dangerouslySetInnerHTML={renderMath('Q')} /> - Nevará mañana.</li>
+                            <li>Premisa Combinada: <span dangerouslySetInnerHTML={renderMath('P \\lor Q')} /> - O lloverá o nevará mañana.</li>
+                            <li>Premisa 3: Hace demasiado calor para nevar (<span dangerouslySetInnerHTML={renderMath('\\neg Q')} />).</li>
+                            <li>Conclusión: Por lo tanto, lloverá (<span dangerouslySetInnerHTML={renderMath('P')} />).</li>
+                        </ul>
+                    </div>
+
+                    <h3>Definición de Validez</h3>
+                    <p>
+                        Un argumento es válido si no es posible que todas las premisas sean verdaderas y la conclusión sea falsa. En los ejemplos anteriores, todos los argumentos son válidos.
+                    </p>
+
+                    <h3>Ejemplo de Argumento Deductivo Inválido:</h3>
+                    <div className={styles.content}>
+                        <ul>
+                            <li>Premisa 1: <span dangerouslySetInnerHTML={renderMath('P')} /> - El mayordomo es culpable.</li>
+                            <li>Premisa 2: <span dangerouslySetInnerHTML={renderMath('Q')} /> - La criada es culpable.</li>
+                            <li>Premisa 3: <span dangerouslySetInnerHTML={renderMath('R')} /> - El cocinero es culpable.</li>
+                            <li>Premisas Combinadas: O el mayordomo es culpable o la criada es culpable (<span dangerouslySetInnerHTML={renderMath('P \\lor Q')} />), y o la criada es culpable o el cocinero es culpable (<span dangerouslySetInnerHTML={renderMath('Q \\lor R')} />).</li>
+                            <li>Conclusión: Por lo tanto, o el mayordomo es culpable o el cocinero es culpable (<span dangerouslySetInnerHTML={renderMath('P \\lor R')} />).</li>
+                        </ul>
+                    </div>
+                    <p>
+                        <b>¿Por qué es Inválido?:</b> Es posible que todas las premisas sean verdaderas, pero la conclusión sea falsa (por ejemplo, si la criada es la única culpable).
+                    </p>
+
+                    <h2>Conectivos Lógicos y Sus Símbolos</h2>
+                    <div className={styles.content}>
+                        <h4>O (Disyunción):</h4>
+                        <ul>
+                            <li>Símbolo: <span dangerouslySetInnerHTML={renderMath('\\lor')} /></li>
+                            <li>Significado: <span dangerouslySetInnerHTML={renderMath('P \\lor Q')} /> es verdadero si al menos uno de <span dangerouslySetInnerHTML={renderMath('P')} /> o <span dangerouslySetInnerHTML={renderMath('Q')} /> es verdadero.</li>
+                        </ul>
+
+                        <h4>Y (Conjunción):</h4>
+                        <ul>
+                            <li>Símbolo: <span dangerouslySetInnerHTML={renderMath('\\land')} /></li>
+                            <li>Significado: <span dangerouslySetInnerHTML={renderMath('P \\land Q')} /> es verdadero solo si tanto <span dangerouslySetInnerHTML={renderMath('P')} /> como <span dangerouslySetInnerHTML={renderMath('Q')} /> son verdaderos.</li>
+                        </ul>
+
+                        <h4>No (Negación):</h4>
+                        <ul>
+                            <li>Símbolo: <span dangerouslySetInnerHTML={renderMath('\\neg')} /></li>
+                            <li>Significado: <span dangerouslySetInnerHTML={renderMath('\\neg P')} /> es verdadero si <span dangerouslySetInnerHTML={renderMath('P')} /> es falso.</li>
+                        </ul>
+                    </div>
+                </div>
+            )}
+
         </div>
     );
 };
