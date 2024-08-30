@@ -53,8 +53,7 @@ const Newsletter: React.FC = () => {
             fetch(`https://newsletter-supabase-express.nicalcoca.workers.dev/api/entries/${id}/keywords/`)
                 .then(response => response.json())
                 .then(data => {
-                    const keywordList = data.map((item: any) => item.Keywords.keyword);
-                    setKeywords(keywordList);
+                    setKeywords(data.map((item: any) => item.keywords.keyword));
                 })
                 .catch(error => console.error('Error fetching the entry keywords:', error));
         }
@@ -65,9 +64,7 @@ const Newsletter: React.FC = () => {
         setLanguage(selectedLanguage);
     };
 
-    if (!styles || !EntryComponent || !globalStyles) {
-        return <div>Loading...</div>;
-    }
+    if (!styles || !EntryComponent || !globalStyles) return <div>Loading...</div>;
 
     return (
         <div className={`${defaultStyles['total-container']} container`}>
@@ -103,7 +100,7 @@ const Newsletter: React.FC = () => {
             {cssFileName && styles && (
                 <>
                     <Suspense fallback={<div>Loading component...</div>}>
-                        <EntryComponent styles={styles} language={language} />
+                        <EntryComponent styles={styles} globalStyles={globalStyles} language={language} />
                     </Suspense>
                     <div>
                         <a href="/" className={styles.btnPrimary}>Regresar al Boletín</a>
