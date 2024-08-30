@@ -63,6 +63,7 @@ const Newsletter: React.FC = () => {
         const selectedLanguage = event.target.value;
         setLanguage(selectedLanguage);
     };
+    console.log(!styles, !EntryComponent, !globalStyles);
 
     if (!styles || !EntryComponent || !globalStyles) return <div>Loading...</div>;
 
