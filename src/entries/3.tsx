@@ -205,9 +205,12 @@ const LogicContent: React.FC<LogicContentProps> = ({ styles, language }) => {
                             </tbody>
                         </table>
                     </div>
+                    <h2>Deepening</h2>
+                    <p>The chapter that I used to learn this is <a href='https://pub-a1db9c9fc4e947c8a68d875a60916f63.r2.dev/chapter1.pdf'>HERE</a>, from the Daniels Velleman's book How to Prove It.</p>
+                    <p>I will publish soon some solutions of it's problems.</p>
                 </div>
             )}
-            {language === 'es' && (
+        {language === 'es' && (
                 <div id="spanishContent">
                     <div className={styles.textCenter}>
                         <h1>Lógica Sentencial: Comprendiendo el Razonamiento Deductivo y los Conectivos Lógicos</h1>
@@ -215,7 +218,7 @@ const LogicContent: React.FC<LogicContentProps> = ({ styles, language }) => {
                     <h2>¿Qué es el Razonamiento Deductivo?</h2>
                     <p>
                         El razonamiento deductivo es un proceso lógico donde se llega a una conclusión basada en premisas (enunciados) que se asumen como verdaderas.
-                        Un argumento se considera válido si es imposible que todas las premisas sean verdaderas y la conclusión sea falsa.
+                        Un argumento se considera válido si es imposible que todas las premisas sean verdaderas mientras la conclusión es falsa.
                     </p>
 
                     <h3>Ejemplos de Razonamiento Deductivo</h3>
@@ -231,21 +234,41 @@ const LogicContent: React.FC<LogicContentProps> = ({ styles, language }) => {
                         </ul>
                     </div>
 
+                    <div className={styles.content}>
+                        <h4>Ejemplo 2:</h4>
+                        <ul>
+                            <li>Premisa 1: <span dangerouslySetInnerHTML={renderMath('P')} /> - Hoy es domingo.</li>
+                            <li>Premisa 2: <span dangerouslySetInnerHTML={renderMath('Q')} /> - No tengo que ir a trabajar hoy.</li>
+                            <li>Premisa Combinada: Si hoy es domingo (<span dangerouslySetInnerHTML={renderMath('P')} />), entonces no tengo que ir a trabajar hoy (<span dangerouslySetInnerHTML={renderMath('Q')} />).</li>
+                            <li>Premisa 3: Hoy es domingo (<span dangerouslySetInnerHTML={renderMath('P')} />).</li>
+                            <li>Conclusión: Por lo tanto, no tengo que ir a trabajar hoy (<span dangerouslySetInnerHTML={renderMath('Q')} />).</li>
+                        </ul>
+                    </div>
+
+                    <div className={styles.content}>
+                        <h4>Ejemplo 3:</h4>
+                        <ul>
+                            <li>Premisa 1: <span dangerouslySetInnerHTML={renderMath('P')} /> - Iré a trabajar mañana.</li>
+                            <li>Premisa 2: <span dangerouslySetInnerHTML={renderMath('Q')} /> - Iré a trabajar hoy.</li>
+                            <li>Premisa Combinada: Iré a trabajar mañana o hoy (<span dangerouslySetInnerHTML={renderMath('P \\lor Q')} />).</li>
+                            <li>Premisa 3: Me quedaré en casa hoy (<span dangerouslySetInnerHTML={renderMath('\\neg Q')} />).</li>
+                            <li>Conclusión: Por lo tanto, iré a trabajar mañana (<span dangerouslySetInnerHTML={renderMath('P')} />).</li>
+                        </ul>
+                    </div>
+
                     <h3>Definición de Validez</h3>
                     <p>
-                        Un argumento es válido si no es posible que todas las premisas sean verdaderas y la conclusión sea falsa. En los ejemplos anteriores, todos los argumentos son válidos.
+                        Un argumento es válido si las premisas no pueden ser todas verdaderas sin que la conclusión también sea verdadera. En los ejemplos anteriores, todos los argumentos son válidos.
                     </p>
 
                     <h3>Ejemplo de Argumento Deductivo Inválido:</h3>
-                    <div className={styles.content}>
-                        <ul>
-                            <li>Premisa 1: <span dangerouslySetInnerHTML={renderMath('P')} /> - El mayordomo es culpable.</li>
-                            <li>Premisa 2: <span dangerouslySetInnerHTML={renderMath('Q')} /> - La criada es culpable.</li>
-                            <li>Premisa 3: <span dangerouslySetInnerHTML={renderMath('R')} /> - El cocinero es culpable.</li>
-                            <li>Premisas Combinadas: O el mayordomo es culpable o la criada es culpable (<span dangerouslySetInnerHTML={renderMath('P \\lor Q')} />), y o la criada es culpable o el cocinero es culpable (<span dangerouslySetInnerHTML={renderMath('Q \\lor R')} />).</li>
-                            <li>Conclusión: Por lo tanto, o el mayordomo es culpable o el cocinero es culpable (<span dangerouslySetInnerHTML={renderMath('P \\lor R')} />).</li>
-                        </ul>
-                    </div>
+                    <ul>
+                        <li>Premisa 1: <span dangerouslySetInnerHTML={renderMath('P')} /> - El mayordomo es culpable.</li>
+                        <li>Premisa 2: <span dangerouslySetInnerHTML={renderMath('Q')} /> - La criada es culpable.</li>
+                        <li>Premisa 3: <span dangerouslySetInnerHTML={renderMath('R')} /> - El cocinero es culpable.</li>
+                        <li>Premisas Combinadas: O el mayordomo es culpable o la criada es culpable (<span dangerouslySetInnerHTML={renderMath('P \\lor Q')} />), y o la criada es culpable o el cocinero es culpable (<span dangerouslySetInnerHTML={renderMath('Q \\lor R')} />).</li>
+                        <li>Conclusión: Por lo tanto, o el mayordomo es culpable o el cocinero es culpable (<span dangerouslySetInnerHTML={renderMath('P \\lor R')} />).</li>
+                    </ul>
                     <p>
                         <b>¿Por qué es Inválido?:</b> Es posible que todas las premisas sean verdaderas, pero la conclusión sea falsa (por ejemplo, si la criada es la única culpable).
                     </p>
@@ -270,9 +293,109 @@ const LogicContent: React.FC<LogicContentProps> = ({ styles, language }) => {
                             <li>Significado: <span dangerouslySetInnerHTML={renderMath('\\neg P')} /> es verdadero si <span dangerouslySetInnerHTML={renderMath('P')} /> es falso.</li>
                         </ul>
                     </div>
+
+                    <h3>Ejemplos de Formas Lógicas</h3>
+                    <ul>
+                        <li>Enunciado: "O Juan fue a la tienda, o no tenemos huevos." Forma Lógica: <span dangerouslySetInnerHTML={renderMath('P \\lor Q')} />, donde <span dangerouslySetInnerHTML={renderMath('P')} /> es "Juan fue a la tienda" y <span dangerouslySetInnerHTML={renderMath('Q')} /> es "No tenemos huevos."</li>
+                        <li>Enunciado: "Joe se va a ir de casa y no va a volver." Forma Lógica: <span dangerouslySetInnerHTML={renderMath('P \\land \\neg R')} />, donde <span dangerouslySetInnerHTML={renderMath('P')} /> es "Joe se va a ir de casa" y <span dangerouslySetInnerHTML={renderMath('R')} /> es "Joe va a volver."</li>
+                        <li>Enunciado: "O Bill está en el trabajo y Jane no, o Jane está en el trabajo y Bill no." Forma Lógica: <span dangerouslySetInnerHTML={renderMath('(B \\land \\neg J) \\lor (J \\land \\neg B)')} />, donde <span dangerouslySetInnerHTML={renderMath('B')} /> es "Bill está en el trabajo" y <span dangerouslySetInnerHTML={renderMath('J')} /> es "Jane está en el trabajo."</li>
+                    </ul>
+
+                    <h3>Tablas de Verdad para los Conectivos Lógicos</h3>
+                    <div className={styles.content}>
+                        <h4>Conjunción (<span dangerouslySetInnerHTML={renderMath('P \\land Q')} />) Tabla de Verdad:</h4>
+                        <table className="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>P</th>
+                                    <th>Q</th>
+                                    <th><span dangerouslySetInnerHTML={renderMath('P \\land Q')} /></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>V</td>
+                                    <td>F</td>
+                                    <td>F</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>V</td>
+                                    <td>F</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>F</td>
+                                    <td>F</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>Disyunción (<span dangerouslySetInnerHTML={renderMath('P \\lor Q')} />) Tabla de Verdad:</h4>
+                        <table className="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>P</th>
+                                    <th>Q</th>
+                                    <th><span dangerouslySetInnerHTML={renderMath('P \\lor Q')} /></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>V</td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>V</td>
+                                    <td>F</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>V</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>F</td>
+                                    <td>F</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>Negación (<span dangerouslySetInnerHTML={renderMath('\\neg P')} />) Tabla de Verdad:</h4>
+                        <table className="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>P</th>
+                                    <th><span dangerouslySetInnerHTML={renderMath('\\neg P')} /></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>V</td>
+                                    <td>F</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>V</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Profundización</h2>
+                    <p>El capítulo con el que aprendí está <a href='https://pub-a1db9c9fc4e947c8a68d875a60916f63.r2.dev/chapter1.pdf'>AQUÍ</a>, del libro How to Prove It de Daniel Velleman.</p>
+                    <p>Algunas soluciones de los ejercicios del capítulo pronto las publicaré.</p>
+
                 </div>
             )}
-
         </div>
     );
 };
