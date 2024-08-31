@@ -74,7 +74,11 @@ const Newsletter: React.FC = () => {
                     <a className="nav-link" href="/">
                         <b className={defaultStyles['back-arrow']}>←</b>
                     </a>
-                    {language === 'en' ? <h1 className={defaultStyles['header-title']}>Newsletter</h1> : <h1 className={defaultStyles['header-title']}>Noticias</h1>}
+                    {language === 'en' ? (
+                        <h1 className={defaultStyles['header-title']}>Newsletter</h1>
+                    ) : (
+                        <h1 className={defaultStyles['header-title']}>Noticias</h1>
+                    )}
                     <select
                         value={language}
                         onChange={handleLanguageChange}
@@ -91,13 +95,13 @@ const Newsletter: React.FC = () => {
                             key={index}
                             src={`/${keyword}.png`}
                             alt={keyword}
-                            className='me-2'
+                            className="me-2"
                             style={{ height: '2rem', width: 'auto' }}
                         />
                     ))}
                 </div>
             </div>
-
+    
             {cssFileName && styles && (
                 <>
                     <Suspense fallback={<div>Loading component...</div>}>
@@ -108,10 +112,11 @@ const Newsletter: React.FC = () => {
                     </div>
                 </>
             )}
-
+    
             <Footer />
         </div>
     );
+    
 };
 
 export default Newsletter;

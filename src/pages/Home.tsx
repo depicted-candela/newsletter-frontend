@@ -29,6 +29,12 @@ const Home: React.FC = () => {
     return (
         <div className={styles.container}>
             
+            <div className="text-center mt-4">
+                <a href="www.depicted-candela.space" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+                    Depicted Candela
+                </a>
+            </div>
+
             <button onClick={toggleLanguage} className={styles.languageToggleButton}>
                 {language === 'en' ? 'Switch to Spanish' : 'Cambiar a Inglés'}
             </button>
