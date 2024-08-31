@@ -30,9 +30,15 @@ const Home: React.FC = () => {
         <div className={styles.container}>
             
             <div className="text-center mt-4">
-                <a href="www.depicted-candela.space" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+                <a 
+                    href="https://www.depicted-candela.space" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={styles.portfolioButton}
+                >
                     Depicted Candela
                 </a>
+                <span className={styles.spaecialText}>ESPÆCIAL</span>
             </div>
 
             <button onClick={toggleLanguage} className={styles.languageToggleButton}>
