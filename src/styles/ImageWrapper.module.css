@@ -1,0 +1,12 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    margin-bottom: 1rem;
+    box-shadow: 0.1rem 0.1rem 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-preview {
+    object-fit: contain;
+}

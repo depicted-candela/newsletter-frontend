@@ -2,6 +2,7 @@
 import React from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
+import ImageWrapper from '../components/ImageWrapper';
 
 type Styles = {
     [className: string]: string;
@@ -24,6 +25,7 @@ const renderMath = (latex: string) => {
 };
 
 const LogicContent: React.FC<LogicContentProps> = ({ styles, language }) => {
+    console.log("STYLES: ", styles);
     return (
         <div className={styles.container}>
             {language === 'en' && (
@@ -205,9 +207,30 @@ const LogicContent: React.FC<LogicContentProps> = ({ styles, language }) => {
                             </tbody>
                         </table>
                     </div>
+                    <h2>My Depiction</h2>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/1.jpeg"} alt={"My depiction"}/>
                     <h2>Deepening</h2>
                     <p>The chapter that I used to learn this is <a href='https://pub-a1db9c9fc4e947c8a68d875a60916f63.r2.dev/chapter1.pdf'>HERE</a>, from the Daniels Velleman's book How to Prove It.</p>
-                    <p>I will publish soon some solutions of it's problems.</p>
+                    <p>My solutions for most of the problems are:</p>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/2.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/3.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/4.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/5.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/6.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/7.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/8.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/9.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/10.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/11.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/12.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/13.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/14.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/15.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/16.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/17.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/18.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/19.jpeg"} alt={"My solution"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/20.jpeg"} alt={"My solution"}/>
                 </div>
             )}
         {language === 'es' && (
