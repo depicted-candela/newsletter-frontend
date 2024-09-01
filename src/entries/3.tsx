@@ -25,7 +25,6 @@ const renderMath = (latex: string) => {
 };
 
 const LogicContent: React.FC<LogicContentProps> = ({ styles, language }) => {
-    console.log("STYLES: ", styles);
     return (
         <div className={styles.container}>
             {language === 'en' && (
