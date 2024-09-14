@@ -17,7 +17,7 @@ const loadComponent = (id: string) => {
 const Newsletter: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const [cssFileName, setCssFileName] = useState<string | null>(null);
-    const [language, setLanguage] = useState('en');
+    const [language, setLanguage] = useState('es');
     const [styles, setStyles] = useState<Styles | null>(null);
     const [globalStyles, setGlobalStyles] = useState<Styles | null>(null);
     const [keywords, setKeywords] = useState<string[]>([]);
