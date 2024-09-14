@@ -2,11 +2,10 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.8;
-    background-color: #f7fafc; /* Neutral background to reduce strain */
+    background-color: #f7fafc;
     color: #2d3748;
 }
 
-/* Styling links */
 a {
     color: #3182ce;
     text-decoration: none;
@@ -17,12 +16,10 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Muted text for secondary information */
 .text-muted {
     color: #718096 !important;
 }
 
-/* Styling for primary buttons */
 .btnPrimary {
     display: inline-block;
     font-weight: 500;
@@ -41,4 +38,3 @@ a:hover {
     background-color: #2b6cb0;
     border-color: #2c5282;
 }
-
