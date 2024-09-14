@@ -25,6 +25,7 @@ const renderMath = (latex: string) => {
 };
 
 const LogicContent: React.FC<LogicContentProps> = ({ styles, language }) => {
+    const images = Array.from({length: 24}, (_, index) => index + 1);
     return (
         <div className={styles.container}>
             {language === 'en' && (
@@ -207,29 +208,10 @@ const LogicContent: React.FC<LogicContentProps> = ({ styles, language }) => {
                         </table>
                     </div>
                     <h2>My Depiction</h2>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/1.jpeg"} alt={"My depiction"}/>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/sententialLogic.jpeg"} alt={"My depiction"}/>
                     <h2>Deepening</h2>
                     <p>The chapter that I used to learn this is <a href='https://pub-a1db9c9fc4e947c8a68d875a60916f63.r2.dev/chapter1.pdf'>HERE</a>, from the Daniels Velleman's book How to Prove It.</p>
                     <p>My solutions for most of the problems are:</p>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/2.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/3.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/4.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/5.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/6.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/7.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/8.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/9.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/10.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/11.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/12.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/13.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/14.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/15.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/16.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/17.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/18.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/19.jpeg"} alt={"My solution"}/>
-                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/20.jpeg"} alt={"My solution"}/>
                 </div>
             )}
         {language === 'es' && (
@@ -412,12 +394,17 @@ const LogicContent: React.FC<LogicContentProps> = ({ styles, language }) => {
                         </table>
                     </div>
 
+                    <h2>Lo que pienso sobre esto</h2>
+                    <ImageWrapper src={"https://pub-9d21c789c65640719683b20c684341f2.r2.dev/sententialLogic.jpeg"} alt={"Perspectiva"}/>
                     <h2>Profundización</h2>
                     <p>El capítulo con el que aprendí está <a href='https://pub-a1db9c9fc4e947c8a68d875a60916f63.r2.dev/chapter1.pdf'>AQUÍ</a>, del libro How to Prove It de Daniel Velleman.</p>
-                    <p>Algunas soluciones de los ejercicios del capítulo pronto las publicaré.</p>
-
+                    <p>Mis soluciones para la mayoría de ejercicios:</p>
+                    
                 </div>
             )}
+            {images.map((image, _) => (
+                <ImageWrapper src={`https://pub-9d21c789c65640719683b20c684341f2.r2.dev/${image}.jpeg`} alt={`Mi solución ${image}`}/>
+            ))}
         </div>
     );
 };
