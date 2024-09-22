@@ -4,6 +4,7 @@ import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import defaultStyles from '../styles/default.module.css';
+import styleNews from '../styles/Home.module.css';
 
 type Styles = {
     [className: string]: string;
@@ -73,6 +74,7 @@ const Newsletter: React.FC = () => {
                     <a className="nav-link" href="/">
                         <b className={defaultStyles['back-arrow']}>←</b>
                     </a>
+                    <span className={styleNews.spaecialText}>ESPÆCIAL</span>
                     {language === 'en' ? (
                         <h1 className={defaultStyles['header-title']}>Newsletter</h1>
                     ) : (
@@ -106,9 +108,11 @@ const Newsletter: React.FC = () => {
                     <Suspense fallback={<div>Loading component...</div>}>
                         <EntryComponent styles={styles} globalStyles={globalStyles} language={language} />
                     </Suspense>
-                    <div>
+                    {language === 'en' ? (
                         <a href="/" className={styles.btnPrimary}>Regresar al Boletín</a>
-                    </div>
+                    ) : (
+                        <a href="/" className={styles.btnPrimary}>Back to the Nesletter</a>
+                    )}
                 </>
             )}
     
