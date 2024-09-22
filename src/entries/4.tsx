@@ -1,29 +1,11 @@
-// LogicContent.tsx
+// 4.tsx
 import React from 'react';
-import katex from 'katex';
 import 'katex/dist/katex.min.css';
+import ComponentImp from '../types';
+import renderMath from '../mathRender';
 import ImageWrapper from '../components/ImageWrapper';
 
-type Styles = {
-    [className: string]: string;
-};
-
-interface LogicContentProps {
-    styles: Styles;
-    globalStyles: Styles;
-    language: string;
-}
-
-const renderMath = (latex: string) => {
-    try {
-        return { __html: katex.renderToString(latex, { throwOnError: false }) };
-    } catch (error) {
-        console.error('KaTeX rendering error:', error);
-        return { __html: latex };
-    }
-};
-
-const LogicContent: React.FC<LogicContentProps> = ({ styles, language }) => {
+const LogicContent: React.FC<ComponentImp> = ({ styles, language }) => {
     const depiction = Array.from({length: 6}, (_, index) => index + 1);
     const solutions = Array.from({length: 4}, (_, index) => index + 1);
     return (
