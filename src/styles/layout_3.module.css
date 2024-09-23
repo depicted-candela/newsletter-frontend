@@ -1,11 +1,12 @@
 /* src/styles/layout_3.module.css */
 
 .container {
-    padding: 20px;
+    width: 90%;
+    margin: 1rem;
+    padding: 1rem;
     background-color: #f3f4f6;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
     max-width: 800px;
 }
 
