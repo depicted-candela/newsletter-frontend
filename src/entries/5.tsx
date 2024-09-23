@@ -10,7 +10,7 @@ const SetOperations: React.FC<ComponentImp> = ({ styles, language }) => {
         <div className={styles.container}>
             {language === 'en' && (
                 <div id='englishContent'>
-                    <div className={styles.textCenter}><h1>Variables and Sets</h1></div>
+                    <div className={styles.textCenter}><h1>Operations in Sets</h1></div>
                     <h2>Motivation</h2>
                     <p>Remember the doubt you had: to go or not to go. Humans are moved by the desire for difference, ego is considered if you prefer over what you have, or innovation when the preserved improves. Almost every week I think where I will go to enrich myself culturally but I know that at home I can do it also by learning, the first theme is about people and the second about my mind.</p>
                     <p>In general this happens to all of us, although for each one it is different. Deep down it seems that the doubt answers itself: yes I am going but inside me learning from books or I am out there discovering such interesting souls. As long as I do not dedicate my days to the contemplation of unimportant things I am going somewhere. So the real question is: going to the max?</p>
@@ -98,7 +98,7 @@ const SetOperations: React.FC<ComponentImp> = ({ styles, language }) => {
                     </div>
 
                     <h2 style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>My Depiction</h2>
-                        <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-4/depiction.pdf" alt="My depiction"/>
+                        <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-4/depiction.pdf" alt="My depiction" width={350}/>
                         <h2>Deepening</h2>
                         <p>The chapter that I used to learn this is <a href='https://pub-a1db9c9fc4e947c8a68d875a60916f63.r2.dev/1-4/1-4.pdf'>HERE</a>, from the Daniels Velleman's book How to Prove It.</p>
                         <h3>My solutions for most of the problems are:</h3>
@@ -106,8 +106,8 @@ const SetOperations: React.FC<ComponentImp> = ({ styles, language }) => {
             )}
             {language === 'es' && (
                 <div id='spanishContent'>
-                    <div className={styles.textCenter}><h1>Variables and Sets</h1></div>
-                    <h2>Motivation</h2>
+                    <div className={styles.textCenter}><h1>Operaciones en Conjuntos</h1></div>
+                    <h2>Motivación</h2>
                     <p>Recuerda la duda que tuviste: ir o no ir. Los humanos se mueven por el deseo de la diferencia, ego se considera si se prefiere sobre lo que se tiene, o innovación cuando lo conservado mejora. Casi cada semana pienso a donde iré para enriquecerme culturamente pero sé que en casa puedo hacerlo también aprendiendo, el primer tema se trata sobre la gente y el segundo sobre mi mente.</p>
                     <p>En general nos pasa esto aunque para cada quien diferente. En el fondo parece que la duda se responde sola: sí estoy yendo pero dentro de mí aprendiendo de libros o estoy por ahí descubriendo almas tan interesantes. Siempre que no dedique mis días a la contemplación de cosas sin importancia estoy yendo a algún sitio. Entonces la duda real es: ir al máximo?</p>
                     <p>Nuestro propósito aparece más claro en el horizonte y es ahora donde otras abstracciones también, como al pagar algo y esperamos el excedente (suma y resta): operaciones sobre conjuntos. Ir al máximo significa darlo todo por lo soñado, para un Dios no importa pero sí para humanos. Viajar a algún país remoto o entender a Marx para comprender mejor el valor de las cosas. Ambas cosas resultarían algo posible pero incompatible si el deseo es maximizar nuestra aventura. Conocer personas muy diferentes pero sin mucho que aportarte como ser para luego volver al hogar y darte cuenta del significado de lo conservado, una parte del valor pero no todo lo que El Capital puede enseñarnos. Esto es una unión "A U B", viajar a un país remoto y estudiar a Marx, resultaremos cansados y saturados por haber hecho tanto con poco significado.</p>
@@ -194,13 +194,13 @@ const SetOperations: React.FC<ComponentImp> = ({ styles, language }) => {
                     </div>
 
                     <h2 style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>Mi Representación</h2>
-                    <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-4/depiction.pdf" alt="Mi representación"/>
+                    <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-4/depiction.pdf" alt="Mi representación" width={350}/>
                     <h2>Profundización</h2>
                     <p>El capítulo que utilicé para aprender esto está <a href='https://pub-a1db9c9fc4e947c8a68d875a60916f63.r2.dev/1-4/1-4.pdf'>AQUÍ</a>, del libro de Daniel Velleman *Cómo Demostrarlo*.</p>
                     <h3>Mis soluciones para la mayoría de los problemas son:</h3>
                 </div>
             )}
-            <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-4/solutions.pdf" alt="My solutions"/>
+            <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-4/solutions.pdf" alt="My solutions" width={350}/>
         </div>
     );
 }
