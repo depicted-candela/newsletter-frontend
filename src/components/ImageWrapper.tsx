@@ -1,3 +1,4 @@
+// src/components/ImageWrapper.tsx
 import React from 'react';
 import styles from '../styles/ImageWrapper.module.css';
 
@@ -14,6 +15,9 @@ const ImageWrapper: React.FC<ImageWrapperProps> = ({ src, alt }) => {
                 alt={alt}
                 className={styles['image-preview']}
             />
+            <a href={src} download className={styles['btn']}>
+                Download Image
+            </a>
         </div>
     );
 };

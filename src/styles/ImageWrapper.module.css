@@ -1,5 +1,8 @@
+/* src/styles/ImageWrapper.module.css */
+
 .image-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: auto;
@@ -10,4 +13,21 @@
 .image-preview {
     width: 100%;
     object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: #3182ce;
+    color: #ffffff;
+    border: none;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #2b6cb0;
 }

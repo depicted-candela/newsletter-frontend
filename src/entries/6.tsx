@@ -7,7 +7,8 @@ import PdfViewer from '../components/PdfViewer';
 const ConditionalAndBiconditionalConnectives: React.FC<ComponentImp> = ({ styles, language }) => {
 
     const renderEnglishContent = () => (
-        <div className={styles.textCenter}><h1>Conditional and Biconditional Connectives in GIS/Geodesy</h1>
+        <div className={styles.textCenter}>
+            <h1>Conditional and Biconditional Connectives in GIS/Geodesy</h1>
             <h2>Motivation</h2>
             <p>You know very well how much decisions cost. A whim is always choosing something just because of the emotions it generates or the past it reminds us of. Imagine if a flock of ducks migrated just because humans started putting pumpkins in streetlights, or if we, wanting to be happy, pursued money, or to feel secure, did what everyone else does. It could be that the ducks find regenerated ecosystems by the time their eggs hatch, or that earning a better salary alleviates worries (only to fall into others), or that:</p>
             {renderShaqsPoem()}
