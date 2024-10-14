@@ -132,9 +132,14 @@ const ConditionalAndBiconditionalConnectives: React.FC<ComponentImp> = ({ styles
 
             </div>
 
+
+
             <h2 style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>My Depiction</h2>
                     
-            <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/depiction.pdf" alt="My depiction" width={350}/>
+            <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/depiction.pdf" alt="My depiction"/>
+
+            <h2>Deepening</h2>
+            <p>The chapter that I used to learn this is <a href='https://pub-a1db9c9fc4e947c8a68d875a60916f63.r2.dev/1-5/1-5.pdf'>HERE</a>, from the Daniels Velleman's book How to Prove It.</p>
 
             <div className={styles.content}>
                 <h4>Exercises</h4>
@@ -271,9 +276,12 @@ const ConditionalAndBiconditionalConnectives: React.FC<ComponentImp> = ({ styles
                 </table>
             </div>
 
-            <h2 style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>Mi Representación Al Respecto</h2>
+            <h2 style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>Mi Representación</h2>
                     
-                <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/depiction.pdf" alt="My depiction" width={350}/>
+            <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/depiction.pdf" alt="My depiction"/>
+
+            <h2>Profundización</h2>
+            <p>El capítulo que utilicé para aprender esto está <a href='https://pub-a1db9c9fc4e947c8a68d875a60916f63.r2.dev/1-5/1-5.pdf'>AQUÍ</a>, del libro de Daniel Velleman *Cómo Demostrarlo*.</p>
 
             <div className={styles.content}>
                 <h4>Ejercicios</h4>
