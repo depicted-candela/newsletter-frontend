@@ -3,6 +3,7 @@ import React from 'react';
 import 'katex/dist/katex.min.css';
 import ComponentImp from '../types';
 import PdfViewer from '../components/PdfViewer';
+import { Helmet } from 'react-helmet-async';
 
 const ConditionalAndBiconditionalConnectives: React.FC<ComponentImp> = ({ styles, language }) => {
 
@@ -139,7 +140,7 @@ const ConditionalAndBiconditionalConnectives: React.FC<ComponentImp> = ({ styles
             <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/depiction.pdf" alt="My depiction"/>
 
             <h2>Deepening</h2>
-            <p>The chapter that I used to learn this is <a href='https://pub-a1db9c9fc4e947c8a68d875a60916f63.r2.dev/1-5/1-5.pdf'>HERE</a>, from the Daniels Velleman's book How to Prove It.</p>
+            <p>The chapter that I used to learn this is <a href='https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/1-5.pdf'>HERE</a>, from the Daniels Velleman's book How to Prove It.</p>
 
             <div className={styles.content}>
                 <h4>Exercises</h4>
@@ -281,7 +282,7 @@ const ConditionalAndBiconditionalConnectives: React.FC<ComponentImp> = ({ styles
             <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/depiction.pdf" alt="My depiction"/>
 
             <h2>Profundización</h2>
-            <p>El capítulo que utilicé para aprender esto está <a href='https://pub-a1db9c9fc4e947c8a68d875a60916f63.r2.dev/1-5/1-5.pdf'>AQUÍ</a>, del libro de Daniel Velleman *Cómo Demostrarlo*.</p>
+            <p>El capítulo que utilicé para aprender esto está <a href='https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/1-5.pdf'>AQUÍ</a>, del libro de Daniel Velleman *Cómo Demostrarlo*.</p>
 
             <div className={styles.content}>
                 <h4>Ejercicios</h4>
@@ -328,8 +329,30 @@ const ConditionalAndBiconditionalConnectives: React.FC<ComponentImp> = ({ styles
         </div>
     );
 
+    const metaTags = () => (
+        <Helmet>
+            {/* General meta tags */}
+            <title>Conditional and Biconditional Connectives</title>
+            <meta name="description" content="Learn about conditional and biconditional connectives in GIS/Geodesy, with examples and exercises." />
+
+            {/* Open Graph meta tags for URL preview */}
+            <meta property="og:title" content="Conectivos Condicionales y Bicondicionales en GIS/Geodesy" />
+            <meta property="og:description" content="Comprenda cómo se aplica la lógica condicional y bicondicional a los SIG/Geodesia con ejemplos y ejercicios." />
+            <meta property="og:image" content="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/thumbnail.png" />
+            <meta property="og:url" content="https://newsletter-frontend.pages.dev/6" />
+            <meta property="og:type" content="article" />
+
+            {/* Twitter Card meta tags */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Conectivos Condicionales y Bicondicionales en GIS/Geodesy" />
+            <meta name="twitter:description" content="Comprenda cómo se aplica la lógica condicional y bicondicional a los SIG/Geodesia con ejemplos y ejercicios.." />
+            <meta name="twitter:image" content="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/thumbnail.png" />
+        </Helmet>
+    );
+
     return (
         <div className={styles.container}>
+            {metaTags()}
             {language === 'en' ? renderEnglishContent() : renderSpanishContent()}
         </div>
     );
