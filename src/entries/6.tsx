@@ -336,7 +336,7 @@ const ConditionalAndBiconditionalConnectives: React.FC<ComponentImp> = ({ styles
             <meta name="description" content="Learn about conditional and biconditional connectives in GIS/Geodesy, with examples and exercises." />
 
             {/* Open Graph meta tags for URL preview */}
-            <meta property="og:title" content="Conectivos Condicionales y Bicondicionales en GIS/Geodesy" />
+            <meta property="og:title" content="Conectivos Condicionales y Bicondicionales en GIS/Geodesy " />
             <meta property="og:description" content="Comprenda cómo se aplica la lógica condicional y bicondicional a los SIG/Geodesia con ejemplos y ejercicios." />
             <meta property="og:image" content="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/thumbnail.png" />
             <meta property="og:url" content="https://newsletter-frontend.pages.dev/6" />
