@@ -70,6 +70,10 @@ const PdfViewer: React.FC<PdfViewerImp> = ({ src, alt }) => {
                     <button onClick={goToNextPage} className={styles['btn']} disabled={pageNumber >= numPages!}>
                         Next
                     </button>
+
+                    <a href={src} download className={styles['btn']}>
+                        Download PDF
+                    </a>
                 </div>
             </div>
             {alt && <div className={styles['pdf-alt']}>{alt}</div>}
