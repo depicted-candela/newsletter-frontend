@@ -149,12 +149,6 @@ const Entry1: React.FC<EntryProps> = ({styles, language}) => {
                     </ul>
                 </div>
 
-                <div className={styles.textCenter} style={{ marginTop: '30px' }}>
-                    <a href="newsletter.html" className={styles.btnPrimary}>
-                    Volver al Newsletter
-                    </a>
-                </div>
-
                 <div className={styles.Contact} style={{ marginTop: '30px' }}>
                     <h2>Información de Contacto</h2>
                     <p>

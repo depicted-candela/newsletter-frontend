@@ -2,9 +2,8 @@
 
 .total-container {
     margin: 1rem;
-    display:'flex';
-    justify-content: 'center';
-    align-items: 'center';
+    justify-content: center;
+    align-items: center;
 }
 
 .header-container {
