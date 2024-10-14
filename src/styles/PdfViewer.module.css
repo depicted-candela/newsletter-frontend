@@ -25,7 +25,6 @@
     overflow-y: hidden;
     overflow-x: auto;
     width: 100%;
-    height: auto;
 }
 
 .pdf-document {
@@ -34,8 +33,7 @@
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    width: 100%; /* Make sure the PDF takes full width */
-    height: auto; /* Auto adjust height to maintain aspect ratio */
+    width: 100%;
 }
 
 .pdf-controls {

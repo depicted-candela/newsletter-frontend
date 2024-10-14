@@ -16,8 +16,8 @@ const PdfViewer: React.FC<PdfViewerImp> = ({ src, alt }) => {
     const [numPages, setNumPages] = useState<number | null>(null);
     const [pageNumber, setPageNumber] = useState(1);
     const [containerWidth, setContainerWidth] = useState<number>(0);
+    const [pageDimensions, setPageDimensions] = useState({ width: 1, height: 1 }); // Holds the current page's aspect ratio
 
-    // Automatically adjust the PDF container width
     useEffect(() => {
         const handleResize = () => {
             const containerElement = document.querySelector(`.${styles['pdf-container']}`);
@@ -26,8 +26,8 @@ const PdfViewer: React.FC<PdfViewerImp> = ({ src, alt }) => {
             }
         };
 
-        handleResize(); // Set width initially
-        window.addEventListener('resize', handleResize); // Adjust on window resize
+        handleResize();
+        window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
@@ -35,18 +35,30 @@ const PdfViewer: React.FC<PdfViewerImp> = ({ src, alt }) => {
         setNumPages(numPages);
     };
 
+    const onPageLoadSuccess = ({ width, height }: { width: number; height: number }) => {
+        setPageDimensions({ width, height });
+    };
+
     const goToNextPage = () => setPageNumber((prevPageNumber) => Math.min(prevPageNumber + 1, numPages!));
     const goToPrevPage = () => setPageNumber((prevPageNumber) => Math.max(prevPageNumber - 1, 1));
 
+    // Calculate aspect ratio based height adjustment
+    const aspectRatio = pageDimensions.height / pageDimensions.width;
+    const calculatedHeight = containerWidth * aspectRatio;
+
     return (
         <div className={styles['pdf-container']}>
-            <div className={styles['pdf-preview']} style={{ height: containerWidth * 1.414 }}>
+            <div className={styles['pdf-preview']} style={{ height: calculatedHeight }}>
                 <Document
                     file={src}
                     onLoadSuccess={onDocumentLoadSuccess}
                     className={styles['pdf-document']}
                 >
-                    <Page pageNumber={pageNumber} width={containerWidth} />
+                    <Page
+                        pageNumber={pageNumber}
+                        width={containerWidth}
+                        onLoadSuccess={onPageLoadSuccess}
+                    />
                 </Document>
                 <div className={styles['pdf-controls']}>
                     <button onClick={goToPrevPage} className={styles['btn']} disabled={pageNumber <= 1}>
