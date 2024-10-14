@@ -10,18 +10,26 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 interface PdfViewerImp {
     src: string;
     alt?: string;
-    width?: number;
 }
 
-const PdfViewer: React.FC<PdfViewerImp> = ({ src, alt, width = 600 }) => {
+const PdfViewer: React.FC<PdfViewerImp> = ({ src, alt }) => {
     const [numPages, setNumPages] = useState<number | null>(null);
     const [pageNumber, setPageNumber] = useState(1);
-    const [containerHeight, setContainerHeight] = useState<number>(0);
+    const [containerWidth, setContainerWidth] = useState<number>(0);
 
-    // Calculate the container height based on the page height dynamically
+    // Automatically adjust the PDF container width
     useEffect(() => {
-        setContainerHeight((width * 1.414)); // Assuming A4 size ratio (height:width = 1.414)
-    }, [width]);
+        const handleResize = () => {
+            const containerElement = document.querySelector(`.${styles['pdf-container']}`);
+            if (containerElement) {
+                setContainerWidth(containerElement.clientWidth);
+            }
+        };
+
+        handleResize(); // Set width initially
+        window.addEventListener('resize', handleResize); // Adjust on window resize
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
         setNumPages(numPages);
@@ -32,13 +40,13 @@ const PdfViewer: React.FC<PdfViewerImp> = ({ src, alt, width = 600 }) => {
 
     return (
         <div className={styles['pdf-container']}>
-            <div className={styles['pdf-preview']} style={{ height: containerHeight }}>
+            <div className={styles['pdf-preview']} style={{ height: containerWidth * 1.414 }}>
                 <Document
                     file={src}
                     onLoadSuccess={onDocumentLoadSuccess}
                     className={styles['pdf-document']}
                 >
-                    <Page pageNumber={pageNumber} width={width} />
+                    <Page pageNumber={pageNumber} width={containerWidth} />
                 </Document>
                 <div className={styles['pdf-controls']}>
                     <button onClick={goToPrevPage} className={styles['btn']} disabled={pageNumber <= 1}>

@@ -2,6 +2,7 @@
 import React from 'react';
 import 'katex/dist/katex.min.css';
 import ComponentImp from '../types';
+import PdfViewer from '../components/PdfViewer';
 
 const ConditionalAndBiconditionalConnectives: React.FC<ComponentImp> = ({ styles, language }) => {
 
@@ -129,6 +130,10 @@ const ConditionalAndBiconditionalConnectives: React.FC<ComponentImp> = ({ styles
                 <p><code>P⇒Q</code> is equivalent to <code>¬Q⇒¬P</code>.</p>
 
             </div>
+
+            <h2 style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>My Depiction</h2>
+                    
+            <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/depiction.pdf" alt="My depiction" width={350}/>
 
             <div className={styles.content}>
                 <h4>Exercises</h4>
@@ -264,6 +269,10 @@ const ConditionalAndBiconditionalConnectives: React.FC<ComponentImp> = ({ styles
                     </tbody>
                 </table>
             </div>
+
+            <h2 style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>Mi Representación Al Respecto</h2>
+                    
+                <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-5/depiction.pdf" alt="My depiction" width={350}/>
 
             <div className={styles.content}>
                 <h4>Ejercicios</h4>

@@ -5,12 +5,12 @@
     background-color: #f3f4f6;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-x: auto;
 }
 
 .pdf-preview {
@@ -21,9 +21,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     position: relative;
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 100%;
+    height: auto;
 }
 
 .pdf-document {
@@ -32,6 +34,8 @@
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+    width: 100%; /* Make sure the PDF takes full width */
+    height: auto; /* Auto adjust height to maintain aspect ratio */
 }
 
 .pdf-controls {

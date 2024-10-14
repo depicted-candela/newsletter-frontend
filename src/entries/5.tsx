@@ -98,10 +98,13 @@ const SetOperations: React.FC<ComponentImp> = ({ styles, language }) => {
                     </div>
 
                     <h2 style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>My Depiction</h2>
-                        <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-4/depiction.pdf" alt="My depiction" width={350}/>
+                    
+                    <PdfViewer src="https://pub-bfd9ae1ad5904482b6c450dd36d126e9.r2.dev/1-4/depiction.pdf" alt="My depiction" width={350}/>
+                        
                         <h2>Deepening</h2>
                         <p>The chapter that I used to learn this is <a href='https://pub-a1db9c9fc4e947c8a68d875a60916f63.r2.dev/1-4/1-4.pdf'>HERE</a>, from the Daniels Velleman's book How to Prove It.</p>
                         <h3>My solutions for most of the problems are:</h3>
+                
                 </div>
             )}
             {language === 'es' && (
