@@ -12,7 +12,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    {/* Wrap the entire app with HelmetProvider */}
     <HelmetProvider>
       <App />
     </HelmetProvider>
