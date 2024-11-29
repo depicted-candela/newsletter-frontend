@@ -100,7 +100,7 @@ const Home: React.FC = () => {
             setEntries(updatedEntries);
         };
         fetchKeywordsForEntries();
-    }, [fetchingDateEntries]);
+    }, [entries, fetchingDateEntries]);
     
 
     const toggleLanguage = () => {
