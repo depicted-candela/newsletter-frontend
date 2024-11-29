@@ -38,7 +38,7 @@ const Home: React.FC = () => {
                 >
                     Depicted Candela
                 </a>
-                <span className={styles.spaecialText}>ESPÆCIAL</span>
+                <a className={styles.spaecialText} href='https://espaecial.org/'><i><b>ESPÆCIAL</b></i></a>
             </div>
 
             <button onClick={toggleLanguage} className={styles.languageToggleButton}>

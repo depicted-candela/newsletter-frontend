@@ -85,10 +85,18 @@
 .spaecialText {
     font-size: 18px;
     font-weight: 600;
-    color: rgb(108, 159, 196);
+    color: #6C9FC4;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
+    text-decoration: none;
     letter-spacing: 1.5px;
+    margin-left: 1rem;
+}
+
+.spaecialText:hover {
+    color: #4A7BA7;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
 }
 
 .portfolioButton {
