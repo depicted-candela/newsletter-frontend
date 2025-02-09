@@ -36,7 +36,8 @@ interface LanguageContentImp {
     [key: string] : {
         title: string,
         rights: string,
-        subtitle: string
+        subtitle: string,
+        state: string
     }
 }
 
@@ -47,11 +48,13 @@ const LANGUAGE_CONTENT: LanguageContentImp = {
         title: "Exploring Frontiers: Newsletter",
         rights: "by Depicted Candela",
         subtitle: "Dive into topics spanning Computer Science, Spatial Mathematics, GIS, Leadership, and Entrepreneurship:",
+        state: "Under migration"
     },
     es: {
         title: "Explorando Fronteras: Newsletter",
         rights: "por Depicted Candela",
         subtitle: "Sumérgete en temas que abarcan Ciencias de la Computación, Matemáticas Espaciales, GIS, Liderazgo y Emprendimiento:",
+        state: "En migración"
     }
 };
 
@@ -109,7 +112,8 @@ const Home: React.FC = () => {
 
     return (
         <div className={styles.container}>
-            
+    
+
             <div className="text-center mt-4">
                 <a 
                     href="https://www.depicted-candela.space" 
@@ -119,7 +123,12 @@ const Home: React.FC = () => {
                 >
                     Depicted Candela
                 </a>
-                <a className={styles.spaecialText} href='https://espaecial.org/'><i><b>ESPÆCIAL</b></i></a>
+                <a className={styles.alephSpaceText} href='https://aleph-space.org/'>
+                    <b>Aleph Space</b>
+                </a>
+                <a className={styles.spaecialText} href='https://espaecial.org/'>
+                    <i><b>ESPÆCI</b></i>
+                </a>
             </div>
 
             <button onClick={toggleLanguage} className={styles.languageToggleButton}>
@@ -129,6 +138,7 @@ const Home: React.FC = () => {
             <h1 className={styles.title}>{LANGUAGE_CONTENT[language].title}</h1>
             <p className={styles.byline}>{LANGUAGE_CONTENT[language].rights}</p>
             <p className={styles.subtitle}>{LANGUAGE_CONTENT[language].subtitle}</p>
+            <p className={styles.subtitle}>{LANGUAGE_CONTENT[language].state}</p>
             
             <ul className={styles.entryList}>
                 {entries.map(entry => (

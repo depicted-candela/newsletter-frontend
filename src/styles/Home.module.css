@@ -29,10 +29,18 @@
 
 .subtitle {
     font-size: 1.3rem;
-    color: #7f8c8d;
+    color: #eaff00c4;
     text-align: center;
     margin-bottom: 2.5rem;
     font-weight: 300;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: 200;
 }
 
 .entryList {
@@ -82,8 +90,50 @@
     background-color: #2ecc71;
 }
 
+header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.alephSpaceHeader {
+    font-size: 3rem; /* Large and prominent */
+    font-weight: 700; /* Bold for emphasis */
+    color: #FFFFFF; /* White text for contrast */
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    text-transform: uppercase; /* Consistent with the title style */
+    letter-spacing: 2px; /* Slightly increased spacing for elegance */
+    margin: 0;
+}
+
+.alephSpaceTagline {
+    font-size: 1.2rem; /* Smaller font for the tagline */
+    font-weight: 400; /* Regular weight for subtlety */
+    color: #CCCCCC; /* Light gray for a softer look */
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0.5rem;
+}
+
+/* Link Styles */
+.alephSpaceText {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.alephSpaceText:hover {
+    color: #FFD700; /* Gold hover effect */
+    text-shadow: 0px 4px 8px rgba(255, 215, 0, 0.5); /* Glow effect */
+    transform: scale(1.05); /* Slight scaling */
+}
+
+/* Special Text Styles */
 .spaecialText {
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #6C9FC4;
     font-family: 'Roboto', sans-serif;
@@ -91,6 +141,7 @@
     text-decoration: none;
     letter-spacing: 1.5px;
     margin-left: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .spaecialText:hover {
